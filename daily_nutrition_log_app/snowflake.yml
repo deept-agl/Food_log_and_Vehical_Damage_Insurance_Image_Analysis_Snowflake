@@ -10,8 +10,8 @@ entities:
     identifier:
       database: IMAGE_ANALYSIS
       schema: PLATE_NUTRITION
-      name: PLATE_NUTRITION_APP
-    title: plate_nutrition_app
+      name: DAILY_NUTRITION_LOG_APP
+    title: daily_nutrition_log_app
     query_warehouse: IMAGE_AI_WH
     compute_pool: SYSTEM_COMPUTE_POOL_CPU
     run_mode: SpcsOnly
