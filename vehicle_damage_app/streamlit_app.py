@@ -10,8 +10,8 @@ st.set_page_config(page_title="Vehicle Damage Assessment", page_icon="🚘", lay
 
 session = get_active_session()
 
-STAGE = "@VEHICLE_DAMAGE_AI_DB.DAMAGE_ANALYSIS.VEHICLE_IMAGES_STAGE"
-TABLE = "VEHICLE_DAMAGE_AI_DB.DAMAGE_ANALYSIS.VEHICLE_DAMAGE_ASSESSMENTS"
+STAGE = "@IMAGE_ANALYSIS.VEHICLE_DAMAGE.VEHICLE_IMAGES_STAGE"
+TABLE = "IMAGE_ANALYSIS.VEHICLE_DAMAGE.VEHICLE_DAMAGE_ASSESSMENTS"
 MODEL = "openai-gpt-4.1"
 
 st.title("🚘 Vehicle Insurance Damage Assessment")
@@ -136,6 +136,7 @@ def save_result(file, relative_path, analysis):
         json.dumps(analysis),
         MODEL
     ]).collect()
+
 
 
 uploaded_file = st.file_uploader("Upload vehicle image", type=["jpg", "jpeg", "png", "webp"])
